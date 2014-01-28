@@ -25,7 +25,9 @@
 /home/tzwm/Development/project/randomicity/platforms/android/assets/www/res \
 /home/tzwm/Development/project/randomicity/platforms/android/assets/www/plugins \
 /home/tzwm/Development/project/randomicity/platforms/android/assets/www/cordova.js \
+/home/tzwm/Development/project/randomicity/platforms/android/assets/www/js/jquery-1.11.0.min.js \
 /home/tzwm/Development/project/randomicity/platforms/android/assets/www/js/jquery.mobile-1.4.0.min.js \
+/home/tzwm/Development/project/randomicity/platforms/android/assets/www/js/phonegap.js \
 /home/tzwm/Development/project/randomicity/platforms/android/assets/www/js/index.js \
 /home/tzwm/Development/project/randomicity/platforms/android/assets/www/img/logo.png \
 /home/tzwm/Development/project/randomicity/platforms/android/assets/www/css/index.css \

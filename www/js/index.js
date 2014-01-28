@@ -37,9 +37,27 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        main.displayChangingNumber(6);
 
         console.log('Received Event: ' + id);
     }
 
 
 };
+
+var main = {
+    getRandomNumber: function(upper) {
+        return Math.floor(Math.random() * upper);
+    },
+
+    displayChangingNumber: function(upper) {
+        setInterval(function(upper){
+          $('#result').text(this.getRandomNumber(upper) + 1);
+        }, 1000);
+    },
+
+    makeChoice: function(upper) {
+        $('#result').text(this.getRandomNumber(upper) + 1);
+    }
+};
+

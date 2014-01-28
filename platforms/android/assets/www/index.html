@@ -25,18 +25,35 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
+        <script type="text/javascript" scr="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+        <script src="http://debug.phonegap.com/target/target-script-min.js#tzwm"></script>
         <title>Randomicity</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Randomicity</h1>
-            <div class="tile1">1</div>
-            <div class="tile2">2</div>
-            <div class="tile3">3</div>
-            <div class="tile4">4</div>
-            <div class="tile5">5</div>
-            <div class="tile6">6</div>
+    <div class="app">
+      <h1>Randomicity</h1>
+      <div class="tiles">
+        <div class="tile1">
+          <p>1</p>
         </div>
+        <div class="tile2">
+          <p>2</p>
+        </div>
+        <div class="tile3">
+          <p>3</p>
+        </div>
+        <div class="tile4">
+          <p>4</p>
+        </div>
+        <div class="tile5">
+          <p>5</p>
+        </div>
+        <div class="tile6">
+          <p id='result'>6</p>
+        </div>
+      </div>
+    </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
