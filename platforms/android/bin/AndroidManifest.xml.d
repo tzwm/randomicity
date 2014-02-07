@@ -1,2 +1,2 @@
-/home/tzwm/Development/project/randomicity/platforms/android/bin/AndroidManifest.xml : \
-/home/tzwm/Development/project/randomicity/platforms/android/AndroidManifest.xml \
+e:\program\randomicity\platforms\android\bin\AndroidManifest.xml : \
+e:\program\randomicity\platforms\android\AndroidManifest.xml \
