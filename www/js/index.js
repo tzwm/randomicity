@@ -51,13 +51,11 @@ var main = {
     },
 
     displayChangingNumber: function(upper) {
-        setInterval(function(upper){
-          $('#result').text(this.getRandomNumber(upper) + 1);
-        }, 1000);
+        setInterval(main.makeChoice, 1000, upper);
     },
 
     makeChoice: function(upper) {
-        $('#result').text(this.getRandomNumber(upper) + 1);
+        $('#result').text(main.getRandomNumber(upper) + 1);
     }
 };
 
