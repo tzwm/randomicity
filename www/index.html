@@ -18,47 +18,46 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-
-        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
-
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Randomicity</title>
-    </head>
-    <body>
-    <div class="app">
-      <h1>Randomicity</h1>
-      <div class="tiles">
-        <div class="tile1">
-          <p>1</p>
-        </div>
-        <div class="tile2">
-          <p>2</p>
-        </div>
-        <div class="tile3">
-          <p>3</p>
-        </div>
-        <div class="tile4">
-          <p>4</p>
-        </div>
-        <div class="tile5">
-          <p>5</p>
-        </div>
-        <div class="tile6">
-          <p id='result'>6</p>
-        </div>
-      </div>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
+    <script type="text/javascript" scr="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+    <script src="http://debug.phonegap.com/target/target-script-min.js#tzwm"></script>
+    <title>Randomicity</title>
+</head>
+<body>
+<div data-role="page" id="page1">
+    <div data-role="header" class="title">
+        Randomcity
     </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+    <div role="main" class="ui-content tiles">
+
+        <div class="ui-grid-a row">
+            <div class="ui-block-a tile"><p>1</p></div>
+            <div class="ui-block-b tile"><p>2</p></div>
+        </div>
+
+        <div class="ui-grid-a row">
+            <div class="ui-block-a tile"><p>3</p></div>
+            <div class="ui-block-b tile"><p>4</p></div>
+        </div>
+
+        <div class="ui-grid-a row">
+            <div class="ui-block-a tile"><p>5</p></div>
+            <div class="ui-block-b tile"><p>6</p></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/phonegap.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
 </html>
