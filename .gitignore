@@ -1,7 +1,7 @@
-platforms/android/bin/*
-platforms/android/CordovaLib/bin/*
+platforms/android/bin/
+platforms/android/CordovaLib/bin/
 
 platforms/android/local.properties
 platforms/android/CordovaLib/local.properties
-www/.idea/*
+www/.idea/
 
