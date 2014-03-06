@@ -26,42 +26,51 @@
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
-    <script type="text/javascript" scr="js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
     <title>Randomicity</title>
 </head>
 <body>
-<div data-role="page" id="page1">
+<div data-role="page" id="home-page">
     <div data-role="header" class="title">
         Randomcity
     </div>
     <div role="main" class="ui-content tiles">
 
         <div class="ui-grid-a row">
-            <div class="ui-block-a tile"><p onclick="toResults(1)">1</p></div>
-            <div class="ui-block-b tile"><p onclick="toResults(2)">2</p></div>
+            <div class="ui-block-a tile"><p>1</p></div>
+            <div class="ui-block-b tile"><p>2</p></div>
         </div>
 
         <div class="ui-grid-a row">
-            <div class="ui-block-a tile"><p onclick="toResults(3)">3</p></div>
-            <div class="ui-block-b tile"><p onclick="toResults(4)">4</p></div>
+            <div class="ui-block-a tile"><p>3</p></div>
+            <div class="ui-block-b tile"><p>4</p></div>
         </div>
 
         <div class="ui-grid-a row">
-            <div class="ui-block-a tile"><p onclick="toResults(5)">5</p></div>
-            <div class="ui-block-b tile"><p onclick="toResults(6)">6</p></div>
+            <div class="ui-block-a tile"><p>5</p></div>
+            <div class="ui-block-b tile"><p>6</p></div>
         </div>
     </div>
 </div>
+
+<div id="results-page"></div>
+
 <script type="text/javascript" src="js/phonegap.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/results.js"></script>
 <script type="text/javascript">
     app.initialize();
 
-    var toResults = function(maxNumber) {
+    $(".tile").click(function(event) {
+        var maxNumber = $(this).text();
         localStorage.setItem("maxNumber", maxNumber);
-        $.mobile.changePage("results.html", {transition: "slide"});
-    };
+
+        main.changePage("home-page", "results-page");
+        var r = new Results(maxNumber);
+        r.displayNumberResults();
+    });
+
 </script>
 </body>
 </html>

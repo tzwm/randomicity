@@ -4,7 +4,7 @@ html, body {
     margin: 0;
 }
 
-#page1 {
+#home-page{
     height: 100%;
 }
 
@@ -37,3 +37,12 @@ html, body {
     background: gold;
 }
 
+#results-page {
+    height: 100%;
+}
+
+#results-page .result-number{
+    height: 100%;
+    font-size: 12em; 
+    text-align: center;
+}

@@ -37,8 +37,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        main.displayChangingNumber(6);
-
         console.log('Received Event: ' + id);
     }
 
@@ -46,16 +44,19 @@ var app = {
 };
 
 var main = {
-    getRandomNumber: function(upper) {
-        return Math.floor(Math.random() * upper);
+    changePage : function( current, next ) {
+        var currentPage = document.getElementById(current);
+        var nextPage = document.getElementById(next);
+        if(!currentPage || !nextPage){
+            return false;
+        }
+
+        currentPage.style.display = "none";
+        nextPage.style.display = "inline";
     },
 
-    displayChangingNumber: function(upper) {
-        setInterval(main.makeChoice, 1000, upper);
-    },
-
-    makeChoice: function(upper) {
-        $('#result').text(main.getRandomNumber(upper) + 1);
+    returnHomePage : function( current ) {
+        main.changePage(current, "home-page");
     }
 };
 

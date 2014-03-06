@@ -37,8 +37,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        main.displayChangingNumber(6);
-
         console.log('Received Event: ' + id);
     }
 
@@ -46,7 +44,7 @@ var app = {
 };
 
 var main = {
-    changePage: function( current, next ) {
+    changePage : function( current, next ) {
         var currentPage = document.getElementById(current);
         var nextPage = document.getElementById(next);
         if(!currentPage || !nextPage){
@@ -55,6 +53,10 @@ var main = {
 
         currentPage.style.display = "none";
         nextPage.style.display = "inline";
-    } 
+    },
+
+    returnHomePage : function( current ) {
+        main.changePage(current, "home-page");
+    }
 };
 
