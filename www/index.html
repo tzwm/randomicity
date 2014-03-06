@@ -29,7 +29,7 @@
     <title>Randomicity</title>
 </head>
 <body>
-<div data-role="page" id="page1">
+<div data-role="page" id="home-page">
     <div data-role="header" class="title">
         Randomcity
     </div>
@@ -51,16 +51,22 @@
         </div>
     </div>
 </div>
+
+<div id="results"></div>
+
 <script type="text/javascript" src="js/phonegap.js"></script>
-<script type="text/javascript" scr="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/results.js"></script>
 <script type="text/javascript">
     app.initialize();
 
     var toResults = function(maxNumber) {
         localStorage.setItem("maxNumber", maxNumber);
-        $.mobile.changePage("results.html", {transition: "slide"});
+        main.changePage("home-page", "results");
+        var r = new Results(maxNumber);
+        r.displayNumberResults();
     };
 </script>
 </body>

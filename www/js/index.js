@@ -46,16 +46,15 @@ var app = {
 };
 
 var main = {
-    getRandomNumber: function(upper) {
-        return Math.floor(Math.random() * upper);
-    },
+    changePage: function( current, next ) {
+        var currentPage = document.getElementById(current);
+        var nextPage = document.getElementById(next);
+        if(!currentPage || !nextPage){
+            return false;
+        }
 
-    displayChangingNumber: function(upper) {
-        setInterval(main.makeChoice, 1000, upper);
-    },
-
-    makeChoice: function(upper) {
-        $('#result').text(main.getRandomNumber(upper) + 1);
-    }
+        currentPage.style.display = "none";
+        nextPage.style.display = "inline";
+    } 
 };
 

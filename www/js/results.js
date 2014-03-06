@@ -1,4 +1,4 @@
-var results = window.results = function (maxnumber, data) {
+var Results = function (maxnumber, data) {
     var root = document.getElementById('results');
 
     if(maxnumber) {
@@ -11,7 +11,7 @@ var results = window.results = function (maxnumber, data) {
 
     this.displayNumberResults = function() {
         var para = document.createElement("p");
-        para.innerHTML = this.results;
+        para.innerHTML = this.results + 1;
 
         root.appendChild(para);
     };
